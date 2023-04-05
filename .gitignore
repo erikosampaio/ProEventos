@@ -1,0 +1,56 @@
+# Arquivos gerados pelo Visual Studio
+*.obj
+*.pdb
+*.exe
+*.dll
+*.user
+*.aps
+*.pch
+*.vspscc
+*_i.c
+*_p.c
+*.ncb
+*.suo
+*.tlb
+*.tlh
+*.bak
+*.cache
+*.ilk
+*.log
+*.lib
+*.sbr
+*.scc
+*.bin
+*.dll.config
+
+# Arquivos gerados pelo MSBuild
+*_i.c
+*.ilk
+*.meta
+*.obj
+*.pdb
+*.pgc
+*.pgd
+*.rsp
+*.sbr
+*.vcproj.*
+*.vcxproj.*
+*.user
+*.xcuserdata
+*.xcworkspace
+
+# Arquivos de dependências NuGet
+packages/
+
+# Arquivos gerados pelo Angular
+/dist
+/node_modules
+*.log
+*.swp
+
+# Outros arquivos a serem ignorados
+*.DS_Store
+*.idea
+*.sln.iml
+*.vscode
+Thumbs.db
