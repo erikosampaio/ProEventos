@@ -485,3 +485,8 @@ npm-debug.log
 yarn-error.log
 testem.log
 /typings
+
+# Excluindo DB
+/.db
+/.db-shm
+/.db-wal
