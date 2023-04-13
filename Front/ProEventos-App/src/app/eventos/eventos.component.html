@@ -22,15 +22,15 @@
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
+    <tr *ngFor="let evento of eventos">
+      <th scope="row">{{evento.eventoId}}</th>
+      <td>{{evento.imagemURL}}</td>
+        <td>{{evento.tema}}</td>
+        <td>{{evento.local}}</td>
+        <td>{{evento.dataEvento}}</td>
+        <td>{{evento.qtdPessoas}}</td>
+        <td>{{evento.lote}}</td>
+        <td></td>
     </tr>
   </tbody>
 </table>
