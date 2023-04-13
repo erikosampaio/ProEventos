@@ -11,8 +11,13 @@ export class EventosComponent implements OnInit {
   constructor(private http: HttpClient) { }
 
   public eventos: any = [];
-  widthImg: number = 50;
-  marginImg: number = 2;
+  larguraImagem: number = 200;
+  margemImagem: number = 2;
+  exibirImagem: boolean = false;
+
+  alternarImagem() {
+    this.exibirImagem = !this.exibirImagem;
+  }
 
   ngOnInit(): void {
     this.getEventos();
