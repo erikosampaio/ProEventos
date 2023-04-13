@@ -24,13 +24,20 @@
   <tbody *ngIf="eventos && eventos.length">
     <tr *ngFor="let evento of eventos">
       <th scope="row">{{evento.eventoId}}</th>
-      <td>{{evento.imagemURL}}</td>
-        <td>{{evento.tema}}</td>
-        <td>{{evento.local}}</td>
-        <td>{{evento.dataEvento}}</td>
-        <td>{{evento.qtdPessoas}}</td>
-        <td>{{evento.lote}}</td>
-        <td></td>
+      <td>
+        <img
+          src="/assets/{{evento.imagemURL}}"
+          alt="img-evento"
+          [style.width.px]="widthImg"
+          [style.margin.px]="marginImg"
+        >
+      </td>
+      <td>{{evento.tema}}</td>
+      <td>{{evento.local}}</td>
+      <td>{{evento.dataEvento}}</td>
+      <td>{{evento.qtdPessoas}}</td>
+      <td>{{evento.lote}}</td>
+      <td></td>
     </tr>
   </tbody>
   <tfoot *ngIf="!eventos.length">
