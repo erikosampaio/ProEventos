@@ -1,7 +1,7 @@
 using System.Threading.Tasks;
 using ProEventos.Domain;
 
-namespace Back.src.ProEventos.Persistence
+namespace ProEventos.Persistence
 {
     public interface IProEventosPersistence
     {
