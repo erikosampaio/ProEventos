@@ -19,7 +19,7 @@
       <th>
         <button class="btn btn-outline-light btn-sm"
           (click)="alternarImagem()">
-          {{!exibirImagem ? 'exibir' : 'ocultar'}}
+          <i class="{{!exibirImagem ? 'fa fa-eye' : 'fa fa-eye-slash'}}"></i>
         </button>
       </th>
       <th>#</th>
@@ -43,15 +43,19 @@
           [style.margin.px]="margemImagem"
         >
       </td>
-      <th scope="row">{{evento.eventoId}}</th>
+      <th scope="row">{{evento.id}}</th>
       <td>{{evento.tema}}</td>
       <td>{{evento.local}}</td>
       <td>{{evento.dataEvento}}</td>
       <td>{{evento.qtdPessoas}}</td>
-      <td>{{evento.lote}}</td>
+      <td>{{evento.lotes[0].nome}}</td>
       <td>
-        <button class="btn btn-primary mr-2">Editar</button>
-        <button class="btn btn-danger">Excluir</button>
+        <button class="btn btn-primary mr-2">
+          <i class="fa fa-edit"></i>
+        </button>
+        <button class="btn btn-danger">
+          <i class="fa fa-trash"></i>
+        </button>
       </td>
     </tr>
   </tbody>
