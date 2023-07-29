@@ -7,6 +7,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { CollapseModule } from 'ngx-bootstrap/collapse';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
+import { ModalModule } from 'ngx-bootstrap/modal';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -22,10 +23,10 @@ import { DateTimeFormatPipe } from './helpers/DateTimeFormat.pipe';
   declarations: [
     AppComponent,
     EventosComponent,
-      PalestrantesComponent,
-      NavComponent,
-      DateTimeFormatPipe
-   ],
+    PalestrantesComponent,
+    NavComponent,
+    DateTimeFormatPipe
+  ],
   imports: [
     BrowserModule,
     FormsModule,
@@ -34,7 +35,8 @@ import { DateTimeFormatPipe } from './helpers/DateTimeFormat.pipe';
     BrowserAnimationsModule,
     CollapseModule.forRoot(),
     BsDropdownModule.forRoot(),
-    TooltipModule.forRoot()
+    TooltipModule.forRoot(),
+    ModalModule.forRoot()
   ],
   providers: [
     EventoService
