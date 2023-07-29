@@ -19,7 +19,7 @@
       <th>
         <button class="btn btn-outline-light btn-sm"
           (click)="alternarImagem()">
-          <i class="{{!exibirImagem ? 'fa fa-eye' : 'fa fa-eye-slash'}}"></i>
+          <i class="{{!exibirImagem ? 'fa fa-eye' : 'fa fa-eye-slash'}}" tooltip="Visualizar Imagem"></i>
         </button>
       </th>
       <th>#</th>
@@ -50,10 +50,10 @@
       <td>{{evento.qtdPessoas}}</td>
       <td>{{evento.lotes[0].nome}}</td>
       <td>
-        <button class="btn btn-primary mr-2">
+        <button class="btn btn-primary mr-2" tooltip="Editar">
           <i class="fa fa-edit"></i>
         </button>
-        <button class="btn btn-danger">
+        <button class="btn btn-danger" tooltip="Excluir">
           <i class="fa fa-trash"></i>
         </button>
       </td>
