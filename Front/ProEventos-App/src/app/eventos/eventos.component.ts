@@ -2,6 +2,7 @@ import { Component, OnInit, TemplateRef } from '@angular/core';
 
 import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
 import { ToastrService } from 'ngx-toastr';
+import { NgxSpinnerService } from 'ngx-spinner';
 
 import { EventoService } from '../services/evento.service';
 import { Evento } from '../models/Evento';
@@ -17,7 +18,8 @@ export class EventosComponent implements OnInit {
   constructor(
     private eventoService: EventoService,
     private modalService: BsModalService,
-    private toastr: ToastrService
+    private toastr: ToastrService,
+    private spinner: NgxSpinnerService
     ) { }
 
   public eventos: Evento[] = [];
@@ -30,6 +32,7 @@ export class EventosComponent implements OnInit {
   public exibirImagem: boolean = false;
 
   public ngOnInit(): void {
+    this.spinner.show();
     this.getEventos();
   }
 
@@ -60,7 +63,11 @@ export class EventosComponent implements OnInit {
         this.eventos = eventos;
         this.eventosFiltrados = this.eventos;
       },
-      error: (error: any) => console.log(error)
+      error: (error: any) => {
+        this.spinner.hide();
+        this.toastr.error('Erro ao carregar os eventos.', 'Erro!');
+      },
+      complete: () => this.spinner.hide()
     });
   }
 
