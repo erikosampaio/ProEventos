@@ -11,8 +11,4 @@ export class TituloComponent implements OnInit {
 
   ngOnInit() {
   }
-
-  public getTitle(titulo: string): string {
-    return titulo;
-  }
 }

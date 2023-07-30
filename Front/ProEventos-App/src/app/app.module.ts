@@ -20,6 +20,7 @@ import { EventosComponent } from './components/eventos/eventos.component';
 import { PalestrantesComponent } from './components/palestrantes/palestrantes.component';
 import { PerfilComponent } from './components/perfil/perfil.component';
 import { NavComponent } from './nav/nav.component';
+import { TituloComponent } from './shared/titulo/titulo.component';
 
 import { EventoService } from './services/evento.service';
 
@@ -34,6 +35,7 @@ import { DateTimeFormatPipe } from './helpers/DateTimeFormat.pipe';
     PalestrantesComponent,
     PerfilComponent,
     NavComponent,
+    TituloComponent,
     DateTimeFormatPipe
   ],
   imports: [
