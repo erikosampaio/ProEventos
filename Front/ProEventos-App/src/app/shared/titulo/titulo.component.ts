@@ -7,6 +7,9 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class TituloComponent implements OnInit {
   @Input() titulo: string = '';
+  @Input() iconClass = 'fa fa-users';
+  @Input() subtitulo: string = 'Desde 2023';
+  @Input() botaoListar: boolean = false;
   constructor() { }
 
   ngOnInit() {
