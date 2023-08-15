@@ -12,6 +12,7 @@ import { EventoListaComponent } from './components/eventos/evento-lista/evento-l
 const routes: Routes = [
   { path: 'contatos', component: ContatosComponent },
   { path: 'dashboard', component: DashboardComponent },
+  { path: 'eventos', redirectTo: "eventos/lista" },
   {
     path: 'eventos', component: EventosComponent,
     children: [
